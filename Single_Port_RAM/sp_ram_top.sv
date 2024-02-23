@@ -3,10 +3,16 @@
 // Description: Top Level Testbench
 //--------------------------------------------------------------------
 
+`timescale 1ns/1ps
+
 `include "sp_ram_intf.sv"
+`include "sp_ram_pkg.sv"
 
 module top();
-
+  
+  import uvm_pkg::*;
+  import sp_ram_pkg::*;
+  
   bit clk;
   bit rst;
   
@@ -29,38 +35,16 @@ module top();
     .rd_data (intf.rd_data)
   );
   
+  // Handle Reset
   initial begin
     rst = 1;
-	
-	// Initialize the signals
-	intf.drv_mp.drv_cb.addr    <= 0;
-	intf.drv_mp.drv_cb.wr_en   <= 0;
-	intf.drv_mp.drv_cb.rd_en   <= 0;
-	intf.drv_mp.drv_cb.wr_data <= 0;
-	
-	// Remove reset
 	#5 rst = 0;
-	
-	// Perform write
-	@(intf.drv_cb);
-	intf.drv_mp.drv_cb.wr_en   <= 1;
-	intf.drv_mp.drv_cb.addr    <= 3;
-	intf.drv_mp.drv_cb.wr_data <= 37;
-	@(posedge clk);
-	intf.drv_mp.drv_cb.wr_en   <= 0;
-	intf.drv_mp.drv_cb.addr    <= 0;
-	
-	// Perform read
-	@(posedge clk);
-	intf.drv_mp.drv_cb.rd_en   <= 1;
-	intf.drv_mp.drv_cb.addr    <= 3;
-	intf.drv_mp.drv_cb.addr    <= 3;
-	@(posedge clk);
-	intf.drv_mp.drv_cb.wr_en   <= 0;
-	intf.drv_mp.drv_cb.addr    <= 0;
-	@(posedge clk);
-	
-	$finish;
+  end
+  
+  initial begin
+	uvm_config_db#(virtual sp_ram_intf)::set(uvm_root::get(), "*", "vif", intf);
+	uvm_top.finish_on_completion = 1;
+	run_test("sp_ram_test");
   end
   
   // Dump signals to VCD file
