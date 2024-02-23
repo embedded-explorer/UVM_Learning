@@ -12,6 +12,8 @@ package sp_ram_pkg;
   `include "sp_ram_sequence.sv"
   `include "sp_ram_sequencer.sv"
   `include "sp_ram_driver.sv"
+  `include "sp_ram_monitor.sv"
+  `include "sp_ram_scoreboard.sv"
   `include "sp_ram_agent.sv"
   `include "sp_ram_environment.sv"
   `include "sp_ram_test.sv"
