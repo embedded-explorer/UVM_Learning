@@ -9,3 +9,4 @@ Documenting Journey of Exploring UVM
 | Up Down Counter | Up Down Counter Testbench, Reset from Top | https://edaplayground.com/x/gWYA |
 | Get Port | UVM Get Port Example | https://edaplayground.com/x/QQJn |
 | Put Port | UVM Put Port Example | https://edaplayground.com/x/WEks |
+| FIFO | Synchronous FIFO Testbench, Reset from sequence | https://edaplayground.com/x/g5Gz |
