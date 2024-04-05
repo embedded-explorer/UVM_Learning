@@ -10,3 +10,4 @@ Documenting Journey of Exploring UVM
 | Get Port | UVM Get Port Example | https://edaplayground.com/x/QQJn |
 | Put Port | UVM Put Port Example | https://edaplayground.com/x/WEks |
 | FIFO | Synchronous FIFO Testbench, Reset from sequence | https://edaplayground.com/x/g5Gz |
+| Pattern Detector | Pattern Detector Driver | https://edaplayground.com/x/PPzb |
