@@ -7,3 +7,5 @@ Documenting Journey of Exploring UVM
 | Transaction_Example | Simple Example Demonsatrating Sequence Item Methods| https://edaplayground.com/x/NMnd |
 | Single Port RAM | Single Port RAM with 2 different test cases | https://edaplayground.com/x/gpi7 |
 | Up Down Counter | Up Down Counter Testbench, Reset from Top | https://edaplayground.com/x/gWYA |
+| Get Port | UVM Get Port Example | https://edaplayground.com/x/QQJn |
+| Put Port | UVM Put Port Example | https://edaplayground.com/x/WEks |
