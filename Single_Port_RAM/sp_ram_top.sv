@@ -43,7 +43,6 @@ module top();
   
   initial begin
 	uvm_config_db#(virtual sp_ram_intf)::set(uvm_root::get(), "*", "vif", intf);
-	uvm_top.finish_on_completion = 1;
 	run_test("sp_ram_test");
   end
   

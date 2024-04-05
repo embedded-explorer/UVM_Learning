@@ -5,14 +5,14 @@
 
 class sp_ram_monitor extends uvm_monitor;
   
+  `uvm_component_utils(sp_ram_monitor)
+  
   // Declare handle for virtual interface
   virtual sp_ram_intf vif;
   
   uvm_analysis_port #(sp_ram_sequence_item) item_rcv_port;
   
   sp_ram_sequence_item item_rcv;
-  
-  `uvm_component_utils(sp_ram_monitor)
   
   // Constructor
   function new(string name, uvm_component parent);

@@ -5,10 +5,10 @@
 
 class sp_ram_environment extends uvm_env;
 
+  `uvm_component_utils(sp_ram_environment)
+  
   sp_ram_agent agent;
   sp_ram_scoreboard scoreboard;
-  
-  `uvm_component_utils(sp_ram_environment)
   
   // Constructor
   function new(string name, uvm_component parent);

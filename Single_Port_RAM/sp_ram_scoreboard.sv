@@ -5,13 +5,13 @@
 
 class sp_ram_scoreboard extends uvm_scoreboard;
   
+  `uvm_component_utils(sp_ram_scoreboard)
+  
   sp_ram_sequence_item item_queue[$];
   
   bit [7:0] scb_mem [7:0];
   
   uvm_analysis_imp#(sp_ram_sequence_item, sp_ram_scoreboard) item_rcv_export;
-  
-  `uvm_component_utils(sp_ram_scoreboard)
   
   // Constructor
   function new(string name, uvm_component parent);

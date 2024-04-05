@@ -5,3 +5,4 @@ Documenting Journey of Exploring UVM
 |-------------|---------------------------------------------|---------------------|
 | Hello_World | Simple Test to print hello world | https://edaplayground.com/x/jbAW |
 | Transaction_Example | Simple Example Demonsatrating Sequence Item Methods| https://edaplayground.com/x/NMnd |
+| Single Port RAM | Single Port RAM with 2 different test cases | https://edaplayground.com/x/gpi7 |

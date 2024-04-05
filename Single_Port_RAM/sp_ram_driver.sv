@@ -5,10 +5,10 @@
 
 class sp_ram_driver extends uvm_driver#(sp_ram_sequence_item);
   
+  `uvm_component_utils(sp_ram_driver)
+  
   // Declare handle for virtual interface
   virtual sp_ram_intf vif;
-  
-  `uvm_component_utils(sp_ram_driver)
   
   // Constructor
   function new(string name, uvm_component parent);
